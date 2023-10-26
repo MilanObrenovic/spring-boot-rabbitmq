@@ -2,7 +2,6 @@ package com.example.springbootrabbitmq.serviceImpl;
 
 import com.example.springbootrabbitmq.dto.UserDTO;
 import com.example.springbootrabbitmq.service.RabbitMqProducerService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -23,7 +22,7 @@ public class RabbitMqProducerServiceImpl implements RabbitMqProducerService {
     @Value("${rabbitmq.routing.json.key}")
     private String routingJsonKey;
 
-    private RabbitTemplate rabbitTemplate;
+    private final RabbitTemplate rabbitTemplate;
 
     @Override
     public void sendMessage(String message) {
