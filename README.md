@@ -27,3 +27,23 @@ This repository demonstrates the basic usage of RabbitMQ integrated in a Java Sp
 |--------------------------------------------|--------|----------------------------------------|
 | `/api/v1/messages/json`                    | `POST` | Add a complex JSON object in RabbitMQ. |
 | `/api/v1/messages/string?message={string}` | `GET`  | Add a string in RabbitMQ.              |
+
+## 2.1. [POST] /api/v1/messages/json
+
+Send a new message to RabbitMQ as a JSON object:
+
+```shell
+curl -X POST -H "Content-Type: application/json" -d '{
+"id": 1,
+"first_name": "John",
+"last_name": "Doe"
+}' http://localhost:8080/api/v1/messages/json
+```
+
+## 2.2. [GET] /api/v1/messages/string?message={string}
+
+Send a new message to RabbitMQ as a string:
+
+```shell
+curl "http://localhost:8080/api/v1/messages/string?message=hello%20world" 
+```
