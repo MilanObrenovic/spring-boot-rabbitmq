@@ -20,3 +20,10 @@ This repository demonstrates the basic usage of RabbitMQ integrated in a Java Sp
 2. Push a json message to queue.
 3. Consume a single message from queue.
 4. Consume json message from queue.
+
+# 2. Test the API
+
+| Endpoint                                   | Method | Description                            |
+|--------------------------------------------|--------|----------------------------------------|
+| `/api/v1/messages/json`                    | `POST` | Add a complex JSON object in RabbitMQ. |
+| `/api/v1/messages/string?message={string}` | `GET`  | Add a string in RabbitMQ.              |
