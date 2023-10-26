@@ -26,7 +26,7 @@ public class RabbitMqProducerServiceImpl implements RabbitMqProducerService {
 
     @Override
     public void sendMessage(String message) {
-        log.info(String.format("Message sent: %s", message));
+        log.info(String.format("[SENT] STRING message: %s", message));
         rabbitTemplate.convertAndSend(
                 exchange,
                 routingKey,
@@ -36,7 +36,7 @@ public class RabbitMqProducerServiceImpl implements RabbitMqProducerService {
 
     @Override
     public void sendJsonMessage(UserDTO userDTO) {
-        log.info(String.format("JSON message sent: %s", userDTO.toString()));
+        log.info(String.format("[SENT] JSON message: %s", userDTO.toString()));
         rabbitTemplate.convertAndSend(
                 exchange,
                 routingJsonKey,
