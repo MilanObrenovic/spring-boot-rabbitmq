@@ -1,27 +1,22 @@
-# Getting Started
+# Java Spring Boot + RabbitMQ
 
-### Reference Documentation
+This repository demonstrates the basic usage of RabbitMQ integrated in a Java Spring Boot v3.1.5+ backend.
 
-For further reference, please consider the following sections:
+# 1. RabbitMQ
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.1.5/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.1.5/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#web)
-* [Spring for RabbitMQ](https://docs.spring.io/spring-boot/docs/3.1.5/reference/htmlsingle/index.html#messaging.amqp)
+- RabbitMQ is a tool that helps different parts of a program to communicate with each other, even if they're not in the
+	same place.
+- This means that RabbitMQ makes sure that the messages get to the right place without data loss.
+- It is specifically helpful when a lot of people are trying to send messages at the same time.
 
-### Guides
+## 1.1. RabbitMQ Architecture
 
-The following guides illustrate how to use some features concretely:
+![spring-boot-rabbitmq-flow-diagram.svg](misc/spring-boot-rabbitmq-flow-diagram.svg)
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Messaging with RabbitMQ](https://spring.io/guides/gs/messaging-rabbitmq/)
+- Here RabbitMQ supports multiple messaging protocols and streaming.
+- This Java Spring Boot REST API example covers the following operations with RabbitMQ integration:
 
-### Additional Links
-
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+1. Push a single message to queue.
+2. Push a json message to queue.
+3. Consume a single message from queue.
+4. Consume json message from queue.
