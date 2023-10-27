@@ -4,6 +4,15 @@
 
 This repository demonstrates the basic usage of RabbitMQ integrated in a Java Spring Boot v3.1.5+ backend.
 
+# 0. Technologies used
+
+| Technology       | Version             |
+|------------------|---------------------|
+| Java Spring Boot | `v3.1.5`            |
+| Docker           | `v24.0.6`           |
+| Docker Compose   | `v2.22.0-desktop.2` |
+| RabbitMQ         | `v3.12.7`           |
+
 # 1. RabbitMQ
 
 - RabbitMQ is a tool that helps different parts of a program to communicate with each other, even if they're not in the
