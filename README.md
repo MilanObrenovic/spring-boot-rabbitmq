@@ -1,5 +1,7 @@
 # Java Spring Boot + RabbitMQ
 
+![banner.svg](misc/banner.svg)
+
 This repository demonstrates the basic usage of RabbitMQ integrated in a Java Spring Boot v3.1.5+ backend.
 
 # 1. RabbitMQ
